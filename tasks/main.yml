@@ -1,0 +1,8 @@
+---
+- name: set post-panic reboot timeout
+  sysctl: 
+    name: kernel.panic 
+    value: "20"
+    state: present
+    sysctl_set: yes
+    reload: yes
